@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+
+<title>MathJax TeX Test Page</title>
+<script type="text/x-mathjax-config">
+  MathJax.Ajax.config.path["Extra"] = "src";
+  MathJax.Hub.Config({
+  extensions: ["[Extra]/AltDescription.js"],
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+  menuSettings: {
+  collapsible: true,  // true, false
+  autocollapse: false, // true, false
+  explorer: true      // true, false
+}
+});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+</head>
+<body>
+<header>
+  <h1>samples of an accessible equations</h1>
+</header>
+<main>
+<h2>Cauchy's Integral Formula</h2>        \[f(a) = \frac{1}{2\pi i} 
+\oint\frac{f(z)}{z-a}dz\]         
+<h2>Double angle formula for Cosines</h2>        \[ 
+\cos(θ+φ)=\cos(θ)\cos(φ)−\sin(θ)\sin(φ) \]         
+<h2>Gauss' Divergence Theorem</h2>        \[ \int_D ({\nabla\cdot} 
+F)dV=\int_{\partial D} F\cdot ndS \]         
+<H5>Curl of a Vector Field</H5>        \[ \vec{\nabla} \times \vec{F} = \left( 
+\frac{\partial F_z}{\partial y} - \frac{\partial F_y}{\partial z} \right) 
+\mathbf{i}        + \left( \frac{\partial F_x}{\partial z} - \frac{\partial 
+F_z}{\partial x} \right) \mathbf{j} + \left( \frac{\partial        F_y}{\partial 
+x} - \frac{\partial F_x}{\partial y} \right) \mathbf{k} \]         
+<h2>Standard Deviation</h2>        \[\sigma = \sqrt{ \frac{1}{N} \sum_{i=1}^N 
+(x_i -\mu)^2} \]         
+<h2>Definition of Christoffel Symbols</h2>        \[(\nabla_X Y)^k = X^i 
+(\nabla_i Y)^k = X^i \left( \frac{\partial Y^k}{\partial x^i} + \Gamma_{im}^k 
+Y^m \right)\]         <A class="card--popout__close" aria-label="Close pop-out" 
+</main>
+</body>
+</html>
