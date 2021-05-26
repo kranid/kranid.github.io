@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function keyAlert(e)
+{
+
+if ((e.keyCode ==32) || (e.keyCode == 13))
+alert("клавиша сработала"); 
+}
+
+document.addEventListener("DOMContentLoaded", () => 
+{
+
+let buttons =Array.from(document.getElementsByClassName("button"));
+console.log(buttons);
+buttons.forEach(e =>
+{
+e.addEventListener("click", () => alert("кнопка нажата"));
+e.addEventListener("keyup", keyAlert);
+});
+
+});
+
+</script>
+<title>Bad buttons</title>
+</head>
+<body>
+<main>
+<h1>Bad buttons</h1>
+<div tabindex="0" class="button">Buy</div>
+<div role="button" class="button">Open</div>
+<div role="button" tabindex="0" onclick="alert('Кнопка нажата')">Download</div>
+
+
+</main>
+	</body>
+</html>
