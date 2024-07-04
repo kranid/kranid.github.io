@@ -8,7 +8,6 @@
 <body>
   <h1>Available Voices</h1>
   <ul id="voices-list"></ul>
-  <button id="speak-button">Speak "Hello"</button>
 
   <script>
     function populateVoiceList() {
@@ -26,16 +25,18 @@
     function speakHello() {
       const voices = speechSynthesis.getVoices();
       const utterance = new SpeechSynthesisUtterance('hello');
+      utterance.lang = 'en-US';
       
-      // Use the first available voice, or default if none
-      const voice = voices.length > 0 ? voices[0] : null;
+      // Use the first available voice that supports English
+      const voice = voices.find(v => v.lang.startsWith('en')) || voices[0];
       if (voice) {
         utterance.voice = voice;
       }
       speechSynthesis.speak(utterance);
     }
 
-    document.getElementById('speak-button').addEventListener('click', speakHello);
+    document.body.addEventListener('click', speakHello);
+    document.body.addEventListener('touchstart', speakHello);
 
     // Check if the voices are already loaded
     if (speechSynthesis.onvoiceschanged !== undefined) {
