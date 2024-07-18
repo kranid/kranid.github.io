@@ -10,25 +10,29 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-family: Arial, sans-serif;
             background-color: black;
-            box-sizing: border-box;
         }
 
         .centered-container {
-            max-width: 80vw;
-            max-height: 80vh;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .inner-container {
+            width: 90vw;
+            height: 90vh;
             background-color: black;
-            border: 100px solid white;
+            border: 2px solid white;
             box-sizing: border-box;
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 20px;
-            text-align: center;
-            color: white;
         }
 
         p {
@@ -55,12 +59,12 @@
 </head>
 
 <body>
-    <main class="centered-container">
-        <div id="start">
+    <div class="centered-container">
+        <div class="inner-container">
             <p>Это демо терминала с брайлевским вводом.<br>Последовательно касайтесь сенсорного экрана одним пальцем для ввода брайлевской цифры</p>
             <button id="startbutton">Начнем</button>
         </div>
-    </main>
+    </div>
 </body>
 
 </html>
