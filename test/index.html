@@ -17,7 +17,7 @@
 
       voices.forEach((voice, index) => {
         const listItem = document.createElement('li');
-        listItem.textContent = `${index + 1}. ${voice.name} (${voice.lang})${voice.default ? ' [default]' : ''}`;
+        listItem.textContent = `${index + 1}. ${voice.name}lang:  (${voice.lang})${voice.default ? ' [default]' : ''}`;
         voicesList.appendChild(listItem);
       });
     }
