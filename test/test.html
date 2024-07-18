@@ -1,18 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text to Speech Example</title>
-</head>
-<body>
-    <button id="speakButton">Speak</button>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            box-sizing: border-box;
+        }
 
-    <script>
-        document.getElementById('speakButton').addEventListener('click', function() {
-            const message = new SpeechSynthesisUtterance('hello world');
-            window.speechSynthesis.speak(message);
-        });
-    </script>
+        .centered-container {
+            max-width: 80vw;
+            max-height: 80vh;
+            background-color: black;
+            border: 100px solid white;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        p {
+            font-size: 2em;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: lightgray;
+        }
+    </style>
+    <title>Terminal demo</title>
+</head>
+
+<body>
+    <main class="centered-container">
+        <div id="start">
+            <p>Это демо терминала с брайлевским вводом.<br>Последовательно касайтесь сенсорного экрана одним пальцем для ввода брайлевской цифры</p>
+            <button id="startbutton">Начнем</button>
+        </div>
+    </main>
 </body>
+
 </html>
