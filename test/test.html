@@ -12,6 +12,7 @@
             width: 100%;
             font-family: Arial, sans-serif;
             background-color: black;
+            color: white;
         }
 
         .centered-container {
@@ -20,7 +21,6 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
         }
 
         .inner-container {
@@ -33,11 +33,12 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
+            overflow-wrap: break-word; /* для поддержки современных браузеров */
+            word-wrap: break-word; /* для поддержки старых браузеров */
         }
 
         p {
             font-size: 2em;
-            color: white;
             margin-bottom: 20px;
         }
 
